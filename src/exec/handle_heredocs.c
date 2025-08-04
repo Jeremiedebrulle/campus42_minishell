@@ -6,7 +6,7 @@
 /*   By: jdebrull <jdebrull@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 10:54:01 by jdebrull          #+#    #+#             */
-/*   Updated: 2025/07/31 12:24:27 by jdebrull         ###   ########.fr       */
+/*   Updated: 2025/08/04 14:47:22 by jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	heredoc_read_input(t_shell *shell, char *delimiter, int write_fd)
 			printf("warning: here-document delimited by EOF '%s'\n", delimiter);
 			shell->exit_code = 0;
 			close(write_fd);
-			exit(1);
+			exit(0);
 		}
 		if (ft_strlen(delimiter) == ft_strlen(input)
 			&& !ft_strncmp(delimiter, input, ft_strlen(delimiter)))
