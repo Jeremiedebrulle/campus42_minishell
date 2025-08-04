@@ -61,10 +61,13 @@ int	count_args(char **av)
 	return (count);
 }
 
-void	cleanup_and_exit(t_shell *shell, t_token *tokens, t_cmd *cmds)
+int	cleanup_and_exit(t_shell *shell, t_token *tokens, t_cmd *cmds)
 {
+	int	exit_code;
+
+	exit_code = shell->exit_code;
 	rl_clear_history();
 	free_tokens_and_cmdlist(tokens, cmds);
 	cleanup_shell(shell);
-	exit(shell->exit_code);
+	exit(exit_code);
 }

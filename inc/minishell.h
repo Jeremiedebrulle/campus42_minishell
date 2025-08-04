@@ -6,7 +6,7 @@
 /*   By: jdebrull <jdebrull@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 11:37:04 by angouby           #+#    #+#             */
-/*   Updated: 2025/07/31 16:02:54 by jdebrull         ###   ########.fr       */
+/*   Updated: 2025/08/04 15:04:11 by angouby          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ void	print_error(const char *prefix, const char *msg);
 void	trim_trailing_newline(char *str);
 void	free_tab(char **list);
 int		count_args(char **av);
-void	cleanup_and_exit(t_shell *shell, t_token *tokens, t_cmd *cmds);
+int		cleanup_and_exit(t_shell *shell, t_token *tokens, t_cmd *cmds);
 
 /* free_helpers.c */
 void	free_heredocs(t_heredoc *heredocs);
