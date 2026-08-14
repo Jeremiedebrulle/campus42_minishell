@@ -1,19 +1,48 @@
-### 📁 Project Structure
+# Minishell
 
-    inc/ – Header files (.h) for each module
+A simple Unix shell written in C as part of the 42 curriculum.
 
-    lib/ – External libraries (e.g., libft)
+The goal of the project was to understand how a shell works by implementing command parsing, environment variables, pipes, redirections, built-in commands, processes and signals.
 
-    src/ – Project source code, organized by responsibility:
+## Features
 
-        cmd/ – Built-in & external command handling
+* Command parsing and execution
+* Pipes
+* Input and output redirections
+* Environment variables
+* Signal handling
+* Built-in commands: `echo`, `cd`, `pwd`, `export`, `unset`, `env`, `exit`
+* External command execution using `$PATH`
 
-        env/ – Environment variable logic
+## Project Structure
 
-        exec/ – Execution engine (fork, pipes, redirections)
+```text
+inc/        Header files
 
-        help/ – Utility/helper functions
+lib/        External libraries (libft)
 
-        main/ – Program entry & shell loop
+src/
+├── cmd/    Built-in and external command handling
+├── env/    Environment variable management
+├── exec/   Execution, processes, pipes and redirections
+├── help/   Utility functions
+├── main/   Entry point and shell loop
+└── pars/   Lexing and parsing
+```
 
-        pars/ – Lexing & parsing input
+## Build
+
+```bash
+make
+```
+
+Run with:
+
+```bash
+./minishell
+```
+
+## Authors
+
+Jérémie Debrulle
+Robin Longueval
