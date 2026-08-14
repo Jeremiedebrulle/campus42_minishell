@@ -45,4 +45,4 @@ Run with:
 ## Authors
 
 Jérémie Debrulle
-Robin Longueval
+Anais Gouby
